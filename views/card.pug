@@ -1,18 +1,8 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        
-        title Flashcards
-    body
-    header 
-        h1 Flash Cards 
+extends layout.pug 
+
+block content
     section#content
         h2= prompt
         if hint
             p
                 i Hint: #{hint}
-    footer 
-        p By Lars Gessner
