@@ -1,10 +1,13 @@
 const express = require("express")
+const { cookie } = require("express/lib/response")
+const cookieParser = require("cookie-parser")
 
 const app = express()
 
 app.set("view engine", "pug")
 
 app.use(express.urlencoded())
+app.use(cookieParser())
 
 // ROUTES GET
 app.get("/", (req, res) => {
@@ -17,13 +20,14 @@ app.get("/cards", (req, res) => {
 
 
 app.get("/hello", (req, res) => {
-    res.render("hello", req.body.username ? { name: req.body.username } : { name: "anon" } )
+    res.render("hello", { name: req.cookies.username })
 })
 
 
 // ROUTES POST
 app.post("/hello", (req, res) => {
-    res.render("hello", req.body.username ? { name: req.body.username } : { name: "anon" } )
+    res.cookie("username", req.body.username)
+    res.render("hello", { name: req.body.username })
 })
 
 

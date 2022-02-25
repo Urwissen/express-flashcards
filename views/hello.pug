@@ -1,7 +1,10 @@
 extends layout.pug 
 
 block content
-    h2 Welcome, #{name}! 
+    if name
+        h2 Welcome, #{name}! 
+    else
+        h2 Welcome, Anon!
 
     form(action="/hello", method="post")
         label Please enter your name:
