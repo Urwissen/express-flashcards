@@ -2,5 +2,8 @@ extends layout.pug
 
 block content
     section#content
-        h2 Welcome!
-        p Best place to study!
+        h2 Welcome #{name}!
+        p here is the place to study!
+        if name
+            form(action="/goodbye", method="post")
+                button("submit") Logout
