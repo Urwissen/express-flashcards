@@ -10,7 +10,9 @@ html(lang="en")
     header 
         h1 Flash Cards 
     section#content
-        h2 Welcome!
-        p Best place to study!
+        h2= prompt
+        if hint
+            p
+                i Hint: #{hint}
     footer 
         p By Lars Gessner
