@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  },
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "A Flashcards Express Site",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"test\"",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"\""
+  },
+  "keywords": [
+    "express",
+    "js",
+    "node"
+  ],
+  "author": "Lars Gessner",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
